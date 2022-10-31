@@ -117,7 +117,7 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
   position: relative;
-  transition: transform 250ms linear;
+  transition: color 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -162,7 +162,7 @@ body {
 .header-contacts-item {
   display: flex;
   align-items: center;
-  transition: transform 250ms linear;
+  transition: color 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -218,7 +218,7 @@ body {
   border: none;
   display: block;
   margin: 0 auto;
-  transition: transform 250ms linear;
+  transition: background-color 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -386,7 +386,7 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  transition: transform 250ms linear;
+  transition: background-color 250ms linear, fill 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -424,17 +424,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 250ms linear;
+  transition: border 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-logo:hover,
+.client-logo:focus {
+  border: 1px solid var(--accent-text-color);
 }
 
 .client-icon {
   fill: var(--icons-color);
 }
 
-.client-logo:hover,
-.client-logo:focus {
-  border: 1px solid var(--accent-text-color);
+.client-logo .client-icon {
+  transition: fill 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-logo:hover .client-icon,
@@ -555,7 +560,8 @@ body {
 }
 
 .menu-portfolio {
-  transition: transform 250ms linear;
+  transition: background-color 250ms linear, color 250ms linear,
+    box-shadow 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -600,6 +606,8 @@ body {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
+  transition: box-shadow 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-example-item:hover .portfolio-example-text {
