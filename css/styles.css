@@ -162,12 +162,18 @@ body {
 .header-contacts-item {
   display: flex;
   align-items: center;
+}
+
+.header-email,
+.header-tel {
   transition: color 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-contacts-item :hover,
-.header-contacts-item :focus {
+.header-email:hover,
+.header-email:focus,
+.header-tel:hover,
+.contact-tel:focus {
   color: var(--accent-text-color);
 }
 
@@ -554,19 +560,17 @@ body {
   border-radius: 4px;
   border: none;
   padding: 6px 22px;
-}
-.menu-portfolio:not(:last-child) {
-  margin-right: 8px;
-}
-
-.menu-portfolio {
   transition: background-color 250ms linear, color 250ms linear,
     box-shadow 250ms linear;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.menu-portfolio :hover,
-.menu-portfolio :focus {
+.menu-portfolio:not(:last-child) {
+  margin-right: 8px;
+}
+
+.portfolio-btn:hover,
+.portfolio-btn:focus {
   background-color: var(--accent-text-color);
   color: var(--prinary-white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
