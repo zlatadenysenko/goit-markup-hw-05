@@ -893,3 +893,29 @@ body {
 .footer-modal {
   margin-left: 93px;
 }
+
+.check-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  display: flex;
+  align-items: center;
+}
+
+.check-text::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  margin-right: 8px;
+}
+
+.input-check:checked + .check-text::before {
+  background-color: var(--accent-text-color);
+  border-color: transparent;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+}
